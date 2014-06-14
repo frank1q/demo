@@ -1,0 +1,5 @@
+/blog/*.sublime-project
+/blog/*.sublime-workspace
+/blog/*.tags
+/blog/*.tags_sorted_by_file
+/blog/index/Runtime
