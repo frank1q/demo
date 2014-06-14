@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2014 年 06 月 13 日 08:52
+-- 生成日期: 2014 年 06 月 14 日 02:19
 -- 服务器版本: 5.5.16
 -- PHP 版本: 5.3.8
 
@@ -407,7 +407,14 @@ CREATE TABLE IF NOT EXISTS `blog_news` (
   `extfield` int(10) NOT NULL DEFAULT '0' COMMENT '拓展字段',
   PRIMARY KEY (`id`),
   FULLTEXT KEY `sort` (`sort`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- 转存表中的数据 `blog_news`
+--
+
+INSERT INTO `blog_news` (`id`, `sort`, `exsort`, `account`, `title`, `places`, `color`, `picture`, `keywords`, `description`, `content`, `method`, `tpcontent`, `norder`, `recmd`, `hits`, `ispass`, `origin`, `addtime`, `releids`, `extfield`) VALUES
+(4, ',000000,100004', '', 'admin', '博客部头图片', '', '', '20140613/thumb_1402650073.jpg', '图片,博客', '', '', 'default/column/content', 'news_content', 0, 0, 30, 1, '原创', 1402650043, '', 0);
 
 -- --------------------------------------------------------
 
@@ -499,7 +506,14 @@ CREATE TABLE IF NOT EXISTS `blog_photo` (
   `extfield` int(10) NOT NULL DEFAULT '0' COMMENT '拓展字段',
   PRIMARY KEY (`id`),
   FULLTEXT KEY `sort` (`sort`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- 转存表中的数据 `blog_photo`
+--
+
+INSERT INTO `blog_photo` (`id`, `sort`, `exsort`, `account`, `title`, `places`, `color`, `picture`, `keywords`, `description`, `photolist`, `conlist`, `content`, `method`, `tpcontent`, `norder`, `recmd`, `hits`, `ispass`, `addtime`, `releids`, `extfield`) VALUES
+(1, ',000000,100005', '', 'admin', '好吧好吧', '', '', '140613055607951179271.png ', '', '', '1406130556062057453817.png ,1406130556071583656748.png , ,140613055607735638937.png ,140613055607480882747.jpg ,140613055607951179271.png ,14061305560752389835.png ', ',,,,,,', '', 'default/column/content', 'news_content', 0, 0, 30, 1, 1402653342, '', 0);
 
 -- --------------------------------------------------------
 
@@ -538,7 +552,16 @@ CREATE TABLE IF NOT EXISTS `blog_sort` (
   `extendid` int(10) NOT NULL COMMENT '拓展表id',
   PRIMARY KEY (`id`),
   FULLTEXT KEY `path` (`path`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=100004 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=100008 ;
+
+--
+-- 转存表中的数据 `blog_sort`
+--
+
+INSERT INTO `blog_sort` (`id`, `type`, `path`, `name`, `ename`, `picture`, `deep`, `norder`, `ifmenu`, `method`, `tplist`, `keywords`, `description`, `url`, `extendid`) VALUES
+(100005, 2, ',000000', '日志', '100005', '', 1, 0, 1, 'photo/index', 'news_content,news_content', '', '', '10', 0),
+(100004, 1, ',000000', '主页内容', '1', '', 1, 0, 1, 'news/index', 'news_content,news_content', '', '', '10', 0),
+(100007, 2, ',000000', '相册', '100006', '', 1, 0, 1, 'photo/index', 'news_content,news_content', '', '', '10', 0);
 
 -- --------------------------------------------------------
 
