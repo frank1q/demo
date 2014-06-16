@@ -12,8 +12,8 @@ return array(
     'DB_USER' => 'root',
     'DB_PWD' => 'root',
     'DB_PORT' => 3306,
-    'DB_NAME' => 'php-api',
-	'DB_PREFIX'		=>	'api_',
+    'DB_NAME' => 'blog',
+	'DB_PREFIX'		=>	'blog_',
 	'DB_CHARSET'	=>	'utf8',
 	
 	);

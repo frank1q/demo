@@ -1,7 +1,53 @@
 <?php
-// 本类由系统自动生成，仅供测试用途
-class IndexAction extends Action {
+class IndexAction extends CommAction {
     public function index(){
-	$this->show('<style type="text/css">*{ padding: 0; margin: 0; } div{ padding: 4px 48px;} body{ background: #fff; font-family: "微软雅黑"; color: #333;} h1{ font-size: 100px; font-weight: normal; margin-bottom: 12px; } p{ line-height: 1.8em; font-size: 36px }</style><div style="padding: 24px 48px;"> <h1>:)</h1><p>欢迎使用 <b>ThinkPHP</b>！</p></div><script type="text/javascript" src="http://tajs.qq.com/stats?sId=9347272" charset="UTF-8"></script>','utf-8');
-    }
+    	// 博客部头图片
+    	$newsArr=M('news');
+    	
+		$index = $newsArr->field('id,sort,picture')->where($where)->order('norder asc')->find();
+        // dump($index);
+
+		//菜单（首页、日志、相册、关于我）
+        $sort = M('sort');
+        $where1['deep']=1;
+        $where1['ifmenu']=1;
+        $sortArr = $sort->field('name,id,path')->where($where1)->order('norder asc')->select();
+        // dump($sortArr[0]['id']);
+
+        //日志列表（不显示详细，只显示下面内容
+        $photo=M('photo');
+        $where2['ispass']=1;
+        $where2['sort']='%'.$sortArr[0]['path'].','.$sortArr[0]['id'].'%';
+        $whereall['sort']= array('like',$where2); 
+        $photoArr = $photo->field('title,picture,addtime,picture,hits,commentCount')->where($whereall)->order('norder asc')->select();
+        // dump($photoArr[1]['title']);
+		
+		//主人留言薄
+		$where3['sort']=$index['sort'].','.'100015';
+		$indexArr = $newsArr->field('content,picture')->where($where3)->order('id DESC')->find();
+        // dump($indexArr);
+        
+        //图片集
+        $where4['ispass']=1;
+        $where4['sort']=$sortArr[0]['path'].','.'100007';
+        $photolistArr = $photo->field('picture')->where($where4)->order('norder asc')->select();
+      	// dump($photolistArr);
+ 		
+ 		//日志日期列表 
+ 		$where5['path']=$sortArr[0]['path'].','.$sortArr[0]['id'];
+        $pathArr = $sort->field('name')->where($where5)->order('id DESC')->select();
+        dump($pathArr);
+
+        $this->assign('pathArr',$pathArr);
+        $this->assign('photolistArr',$photolistArr);
+        $this->assign('index',$photo);
+        $this->assign('photo',$photo);
+        $this->assign('index',$index);
+        $this->assign('sortArr',$sortArr);
+	}
+	//日志列表(与首页列表一样）
+	public function index(){
+		
+	}
 }
+?>

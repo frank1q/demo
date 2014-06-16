@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2014 年 06 月 14 日 02:19
+-- 生成日期: 2014 年 06 月 15 日 03:35
 -- 服务器版本: 5.5.16
 -- PHP 版本: 5.3.8
 
@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `blog_admin` (
 --
 
 INSERT INTO `blog_admin` (`id`, `groupid`, `username`, `realname`, `password`, `lastlogin_time`, `lastlogin_ip`, `iflock`, `sortpower`, `extendpower`) VALUES
-(1, 1, 'admin', 'YX', '168a73655bfecefdb15b14984dd2ad60', 1402646372, '127.0.0.1', 0, '', '');
+(1, 1, 'admin', 'YX', '168a73655bfecefdb15b14984dd2ad60', 1402802262, '127.0.0.1', 0, '', '');
 
 -- --------------------------------------------------------
 
@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `blog_extend` (
   `ifsearch` tinyint(1) NOT NULL DEFAULT '0',
   `norder` int(5) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
 
 --
 -- 转存表中的数据 `blog_extend`
@@ -82,7 +82,9 @@ INSERT INTO `blog_extend` (`id`, `pid`, `tableinfo`, `type`, `defvalue`, `name`,
 (14, 12, 'tel', 1, '', '电话', 0, 0),
 (15, 12, 'qq', 1, '', 'QQ', 0, 0),
 (16, 12, 'content', 3, '', '留言内容', 0, 0),
-(17, 12, 'reply', 2, '', '回复内容', 0, 0);
+(17, 12, 'reply', 2, '', '回复内容', 0, 0),
+(18, 0, 'extend_placelist', 1, NULL, '地址列表', 0, 0),
+(19, 18, 'name', 1, '', '地址名称', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -120,6 +122,30 @@ CREATE TABLE IF NOT EXISTS `blog_extend_guestbook` (
   `reply` varchar(250) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `blog_extend_placelist`
+--
+
+CREATE TABLE IF NOT EXISTS `blog_extend_placelist` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `addtime` int(11) NOT NULL,
+  `ip` varchar(16) NOT NULL,
+  `ispass` tinyint(1) NOT NULL,
+  `name` varchar(250) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- 转存表中的数据 `blog_extend_placelist`
+--
+
+INSERT INTO `blog_extend_placelist` (`id`, `addtime`, `ip`, `ispass`, `name`) VALUES
+(1, 1402803293, '127.0.0.1', 1, '中国'),
+(2, 1402803299, '127.0.0.1', 1, '美国'),
+(3, 1402803306, '127.0.0.1', 1, '英国');
 
 -- --------------------------------------------------------
 
@@ -506,14 +532,15 @@ CREATE TABLE IF NOT EXISTS `blog_photo` (
   `extfield` int(10) NOT NULL DEFAULT '0' COMMENT '拓展字段',
   PRIMARY KEY (`id`),
   FULLTEXT KEY `sort` (`sort`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- 转存表中的数据 `blog_photo`
 --
 
 INSERT INTO `blog_photo` (`id`, `sort`, `exsort`, `account`, `title`, `places`, `color`, `picture`, `keywords`, `description`, `photolist`, `conlist`, `content`, `method`, `tpcontent`, `norder`, `recmd`, `hits`, `ispass`, `addtime`, `releids`, `extfield`) VALUES
-(1, ',000000,100005', '', 'admin', '好吧好吧', '', '', '140613055607951179271.png ', '', '', '1406130556062057453817.png ,1406130556071583656748.png , ,140613055607735638937.png ,140613055607480882747.jpg ,140613055607951179271.png ,14061305560752389835.png ', ',,,,,,', '', 'default/column/content', 'news_content', 0, 0, 30, 1, 1402653342, '', 0);
+(1, ',000000,100005', '', 'admin', '好吧好吧', '', '', '140613055607951179271.png ', '', '', '1406130556062057453817.png ,1406130556071583656748.png , ,140613055607735638937.png ,140613055607480882747.jpg ,140613055607951179271.png ,14061305560752389835.png ', ',,,,,,', '', 'default/column/content', 'news_content', 0, 0, 30, 1, 1402653342, '', 0),
+(2, ',000000,100005', '100012,100013,100014', 'admin', '测试副栏目', '', '', '', '栏目,测试', '测试副栏目测试副栏目', '', '', '测试副栏目测试副栏目', 'default/column/content', 'news_content', 0, 0, 30, 1, 1402716076, '', 0);
 
 -- --------------------------------------------------------
 
@@ -552,7 +579,7 @@ CREATE TABLE IF NOT EXISTS `blog_sort` (
   `extendid` int(10) NOT NULL COMMENT '拓展表id',
   PRIMARY KEY (`id`),
   FULLTEXT KEY `path` (`path`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=100008 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=100017 ;
 
 --
 -- 转存表中的数据 `blog_sort`
@@ -561,7 +588,9 @@ CREATE TABLE IF NOT EXISTS `blog_sort` (
 INSERT INTO `blog_sort` (`id`, `type`, `path`, `name`, `ename`, `picture`, `deep`, `norder`, `ifmenu`, `method`, `tplist`, `keywords`, `description`, `url`, `extendid`) VALUES
 (100005, 2, ',000000', '日志', '100005', '', 1, 0, 1, 'photo/index', 'news_content,news_content', '', '', '10', 0),
 (100004, 1, ',000000', '主页内容', '1', '', 1, 0, 1, 'news/index', 'news_content,news_content', '', '', '10', 0),
-(100007, 2, ',000000', '相册', '100006', '', 1, 0, 1, 'photo/index', 'news_content,news_content', '', '', '10', 0);
+(100007, 2, ',000000', '相册', '100006', '', 1, 0, 1, 'photo/index', 'news_content,news_content', '', '', '10', 0),
+(100015, 1, ',000000,100004', '留言薄', '100015', '', 2, 0, 1, 'news/index', 'news_content,news_content', '', '', '10', 0),
+(100016, 1, ',000000,100004', '每天心情', '100016', '', 2, 0, 1, 'news/index', 'news_content,news_content', '', '', '10', 0);
 
 -- --------------------------------------------------------
 
