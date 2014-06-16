@@ -400,7 +400,6 @@
 	padding: 2px;
 	height: 214px;
 	width: 228px;
-	/*float: left;*/
 }
 .listd ul{
 	margin-top: 17px;
@@ -447,4 +446,130 @@
 	line-height: 31px;
 	float: left;
 }
+.auditor{
+	border: 2px solid #E1E1E1;
+	background: #F7F7F7;
+	width: 887px;
+	height: 135px;
+	margin-left: 57px;
+	margin-top: 55px;
+	float: left;
+}
+.auditora{
+	background: #5FDEE4;
+	border: 2.5px solid #fff;
+	width: 165px;
+	margin-left: 5px;
+	margin-top: 7px;
+	font-size: 15px;
+	color: #fff;
+	text-align:center;
+	height: 55px;
+	line-height: 55px;
+	float: left;
+}
+.ml9{
+	margin-left: 11px;
+}
+.auditorb{
+	background: #D3D3D3;
+	border: 2.5px solid #fff;
+	width: 165px;
+	height: 55px;
+	margin-left: 5px;
+	margin-top: 4px;
+	font-size: 15px;
+	color: #fff;
+	text-align:center;
+	line-height: 55px;
+	float: left;
+}
+.ml9{
+	margin-left: 11px;
+}
+.examination{
+	border: 2px solid #E1E1E1;
+	background: #F7F7F7;
+	width: 363px;
+	height: 198px;
+	margin-left: 316px;
+	margin-top: 54px;
+	float: left;
+}
+.examinationc{
+	width: 170px;
+	height: 180px;
+	margin-left: 10px;
+	float: left;
 
+}
+.examinationa{
+	background: #D3D3D3;
+	width: 165px;
+	height: 53px;
+	border: 2.5px solid #fff;
+	margin-top: 6px;
+	text-align:center;
+	line-height: 53px;
+	font-size: 16px;
+	color: #fff;
+	float: left;
+}
+.examinationb{
+	background: #5FDEE4;
+	width: 165px;
+	height: 53px;
+	border: 2.5px solid #fff;
+	margin-top: 6px;
+	margin-left: -5px;
+	text-align:center;
+	line-height: 53px;
+	font-size: 16px;
+	color: #fff;
+	float: left;
+}
+.listz{
+	border: 2px solid #E1E1E1;
+	overflow: hidden;
+	padding: 2px;
+	height: 134px;
+	width: 228px;
+}
+.open{
+	border: 2px solid #E1E1E1;
+	background: #F7F7F7;
+	width: 877px;
+	height: 321px;
+	margin-left: 57px;
+	margin-top: 54px;
+}
+.openc{
+	width: 867px;
+	height: 59px;
+	margin-left: 5px;
+	margin-top: 3.5px;
+}
+.opena{
+	border: 2px solid #fff;
+	background: #5FDEE4;
+	width: 371px;
+	height: 53px;
+	margin-left: 4px;
+	padding-left: 53px;
+	line-height: 53px;
+	font-size: 16px;
+	color: #fff;
+	float: left;
+}
+.openb{
+	border: 2px solid #fff;
+	background: #D3D3D3;
+	width: 371px;
+	height: 53px;
+	margin-left: 4px;
+	padding-left: 53px;
+	line-height: 53px;
+	font-size: 16px;
+	color: #fff;
+	float: left;
+}
