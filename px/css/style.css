@@ -1,0 +1,104 @@
+.index{
+	width: 980px;
+	height: 721px;
+	margin: 0 auto ;
+}
+.indexa{
+	background: url('../images/main.jpg');
+	width: 100%;
+	height: 645px;
+}
+.indexb{
+	width: 100%;
+	height: 76px;
+}
+.navi{
+	background: url('../images/navi.png')no-repeat;
+	width: 100%;
+	height: 83px;
+	margin-left: 220px;
+	margin-top: 22px;
+	float: left;
+}
+.navi ul{
+	padding-left: 3px;
+}
+.navi li{
+	width: 124px;
+	height: 39px;
+	float: left;
+	margin-left: 5px;
+	text-align: center;
+	line-height: 39px;
+}
+.navi a{
+	color: #fff;
+	font-size: 14px;
+}
+.indexab{
+	width: 493px;
+	height: 562px;
+	float: left;
+}
+.indexac{
+	width: 446px;
+	height: 562px;
+	float: left;
+}
+.notice{
+	background: url('../images/notice.png')no-repeat;
+	width: 358px;
+	/*height: 15px;*/
+}
+.notice ul{
+	padding-top: 17px;
+	overflow: hidden;
+}
+.notice li{
+	background: url('../images/dotted.png') left no-repeat;
+	padding-left: 10px;
+	width: 315px;
+	height: 14px;
+	float: left;
+	margin-top: 7px;
+	font-size: 13px;
+	margin-left: 5px;
+	color: #000;
+}
+.notice a{
+	margin-top: 20px;
+}
+.noticea{
+	color: #8C9091;
+	float: right;
+	font-size: 8px;
+	margin-top: 2px;
+	font-weight: bold;
+	margin-right: 5px;
+}
+.topic{
+	background: url('../images/topic.png')no-repeat;
+	width: 359px;
+	height: 121px;
+	margin-top: 20px;
+}
+.phone{
+	background: url('../images/phone.png')no-repeat;
+	width: 176px;
+	height: 107px;
+	margin-top: 8px;
+	float: left;
+}
+.rt{
+	background: url('../images/rt.png')no-repeat;
+	width: 178px;
+	height: 104px;
+	margin-top: 13px;
+	margin-left: 5px;
+	float: left;
+}
+.indexad{
+	width: 41px;
+	height: 562px;
+	float: left;
+}
