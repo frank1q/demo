@@ -573,3 +573,154 @@
 	color: #fff;
 	float: left;
 }
+.revise{
+	border: 2px solid #E1E1E1;
+	overflow: hidden;
+	padding: 2px;
+	height: 176px;
+	width: 228px;
+}
+.revisea{
+	background: url('../images/sendmsg.jpg'); 
+	width: 840px;
+	height: 309px;
+	margin-left: 85px;
+	margin-top: 56px;
+}
+.reviseb{
+	font-size: 25px;
+	margin-left: 62px;
+	margin-top: 42px;
+	float: left;
+}
+.reviseb textarea{
+	background-color: transparent !important;
+	border: none;
+	outline: none;
+}
+.import{
+	border: 2px solid #E1E1E1;
+	overflow: hidden;
+	padding: 2px;
+	height: 176px;
+	width: 228px;
+}
+.importa{
+	background: url('../images/changepwd.jpg'); 
+	width: 430px;
+	height: 275px;
+	margin-left: 165px;
+	margin-top: 54px;
+	overflow: hidden;
+	padding-top: 34px;
+}
+.importb{
+	padding-left: 34px;
+	color: #474747;
+	font-size: 17px;
+}
+.importc{
+	font-size: 17px;
+	padding-top: 38px;
+	color: #474747;
+	width: 
+}
+.pl34{
+	padding-left: 34px;
+}
+.importd{
+	margin-left: 35px;
+	width: 110px;
+	height: 132px;
+	float: left;
+}
+.importe{
+	width: 260px;
+	height: 147px;
+	float: left;
+}
+.importf{
+	color: #666666;
+	font-size: 15px;
+	padding-top: 2px;
+}
+.indexlistg{
+	padding-top: 8px;
+}
+.indexlistg input{
+	background: #D3D3D3;
+	border-radius: 5px;
+	border: 1px solid #8C8C8C;
+	width: 248px;
+	height: 42px;
+	font-size: 14px;
+	padding-left: 5px;
+	outline: none;
+	float: left;
+	margin-top: 15px;
+}
+.register{
+	background: url('../images/register.jpg');
+	width: 430px;
+	height: 512px;
+	margin-top: 183px;
+	text-align:center;
+	margin-left: 396px;
+}
+.registera{
+	margin-top: 105px;
+	margin-left: 18px;
+	width: 94px;
+	height: 261px;
+	float: left;
+}
+.registerb{
+	padding-top: 37px;
+}
+.pl16{
+	margin-left: 16px;
+}
+.pl32{
+	margin-left: 32px;
+}
+.registerd{
+	width: 289px;
+	height: 290px;
+	margin-top: 92px;
+	float: left;
+}
+.registere input{
+	background: #D3D3D3;
+	border-radius: 5px;
+	border: 1px solid #8C8C8C;
+	width: 252px;
+	height: 42px;
+	font-size: 14px;
+	padding-left: 5px;
+	outline: none;
+	float: left;
+	margin-top: 9px;
+}
+.registerf input{
+	background: #D3D3D3;
+	border-radius: 5px;
+	border: 1px solid #8C8C8C;
+	width: 252px;
+	height: 42px;
+	font-size: 14px;
+	padding-left: 5px;
+	outline: none;
+	float: left;
+}
+.registerg input{
+	background: #D3D3D3;
+	border-radius: 5px;
+	border: 1px solid #8C8C8C;
+	width: 197px;
+	height: 42px;
+	font-size: 14px;
+	padding-left: 5px;
+	outline: none;
+	float: left;
+	margin-top: 9px;
+}
