@@ -64,7 +64,8 @@
 	line-height: 18px;
 }
 .notice a{
-	margin-top: 20px;
+	/*margin-top: 20px;*/
+	float: left;
 }
 .noticea{
 	color: #8C9091;
