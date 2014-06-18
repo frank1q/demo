@@ -257,7 +257,7 @@
 }
 .kkb{
 	width: 607px;
-	min-height: 442px;
+	min-height: 542px;
 	float: left;
 }
 .kkbtop{
@@ -267,7 +267,7 @@
 }
 .kkbtopa{
 	font-size: 18px;
-	margin-left: 14px;
+	margin-left: 20px;
 	margin-top: 7px;
 	float: left;
 }
@@ -279,4 +279,142 @@
 }
 .top1{
 	border-top: 1px solid #ccc;
+}
+.contenttitle{
+	background: url('../images/contenttitle.png')no-repeat;
+	width: 571px;
+	height: 119px;
+	margin-top: 20px;
+}
+.contenttitlea{
+	margin-left: 20px;
+	margin-top: 26px;
+	float: left;
+}
+.textbox{
+	line-height: 20px;
+	font-size: 13px;
+	margin-top: 10px;
+	float: left;
+}
+.toeic{
+	background: url('../images/toeic.png')no-repeat;
+	width: 608px;
+	height: 137px;
+	margin-top: 27px;
+}
+.toeic ul{
+	margin-left: 300px;
+}
+.toeic ul li{
+	margin-top: 118px;
+	width: 81px;
+	margin-left: 5px;
+	text-align: center;
+	float: left;
+}
+.toeic a{
+	font-size: 15px
+}
+.tlme{
+	width: 605px;
+	height: 196px;
+}
+.tlmea{
+	background: #111;
+	height: 14px;
+}
+.tlme table{
+	/*border: 1px solid #ccc;*/
+	width: 100%;
+}
+.tlme table tr td {
+	width: 30%;
+}
+.contectbanner{
+	background: url('../images/contectbanner.png')no-repeat;
+	width: 628px;
+	height: 110px;
+	margin-top: 20px;
+	padding-top: 20px;
+	padding-left: 270px;
+}
+.contectbannera{
+	width: 205px;
+	height: 57px;
+}
+.bottom{
+	background: #ddd;
+	width: 594px;
+	height: 355px;
+	margin-left: 8px;
+}
+.image{
+	width: 542px;
+	height: 153px;
+	margin-top: 27px;
+}
+.CN{
+	width: 192px;
+	height: 136px;
+	border: 1px solid #CCC;
+	float: left;
+}
+.CNa{
+	margin-top: 4px;
+	background: url('../images/CN.jpg')no-repeat;
+	width: 184px;
+	height: 128px;
+	margin-left: 4px;
+}
+.CNb{
+	width: 325px;
+	height: 154px;
+	margin-left: 22px;
+	float: left;
+}
+.CNba{
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 1em;
+	color: #003f5f;
+}
+.CNbb{
+	font-weight: bold;
+	color: #3b3b3b;
+	margin-top: 10px;
+	font-size: 14px;
+}
+.CNbc{
+	color: #7d7d7d;
+	margin-top: 10px;
+	font-size: 13px;
+}
+.CNc{
+	margin-top: 4px;
+	background: url('../images/00.jpg')no-repeat;
+	width: 184px;
+	height: 128px;
+	margin-left: 4px;
+}
+.CNd{
+	margin-top: 4px;
+	background: url('../images/CN (1).jpg')no-repeat;
+	width: 184px;
+	height: 128px;
+	margin-left: 4px;
+}
+.CNe{
+	margin-top: 4px;
+	background: url('../images/CN (2).jpg')no-repeat;
+	width: 184px;
+	height: 128px;
+	margin-left: 4px;
+}
+.CNf{
+	margin-top: 4px;
+	background: url('../images/00 (1).jpg')no-repeat;
+	width: 184px;
+	height: 128px;
+	margin-left: 4px;
 }
