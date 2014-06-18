@@ -156,13 +156,29 @@ class photoController extends commonController
              	$iftag = $this->crtags($data['keywords']);
              	//if(!$iftag) $this->alert('标签生成失败~');
              }
-			if(!empty($_POST['photolist']))
-			$data['photolist']=implode(',',$_POST['photolist']);
-			if(!empty($_POST['conlist']))
-			$data['conlist']=implode(',',in($_POST['conlist']));
-			if(model('photo')->insert($data))
-			$this->success('图集添加成功~',url('photo/index'));
+			if(!empty($_POST['photolist'])){
+				$data['photolist']=implode(',',$_POST['photolist']);
+			}
+			
+			
+			if(!empty($_POST['conlist'])){
+				$data['conlist']=implode(',',in($_POST['conlist']));
+			}
+			// exit;
+			if($insert_id = model('photo')->insert($data)){
+				if(!empty($_POST['photolist'])){
+					$str = '';
+					foreach ($_POST['photolist'] as $key => $v) {
+						$str .= '('.$insert_id.',"'.$v.'","'.$_POST['conlist'][$key].'",'.time().'),';
+					}
+				}
+				$str = trim($str,',');
+				model('photo')->photoadd($str);
+				$this->success('图集添加成功~',url('photo/index'));
+			}
+				
 			else $this->error('图集添加失败');
+
 		}
 	}
 

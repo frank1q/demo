@@ -185,9 +185,9 @@ function unrecmd(obj){
             <th align="center" width="70"><input type="checkbox" name="chkAll" value="checkbox" onClick="CheckAll(this.form)"/></th>
             <th width="50">ID</th>
             <th>所属栏目</th>
-            <th>图集标题(点击)</th>
-            <th width="150" >发布者</th>	
-            <th width="120" >排序<font size="-2">[点击修改]</font></th>	
+            <th>图集标题(阅读总数)</th>
+            <th width="150" >评论数</th>	
+            <!-- <th width="120" >排序<font size="-2">[点击修改]</font></th>	 -->
             <th width="150" >添加日期</th>
             <th width="150" align="center">管理选项</th>
           </tr>
@@ -207,10 +207,10 @@ function unrecmd(obj){
                           $cont.= '<tr id="'.$vo['id'].'"><td align="center"><input type="checkbox" name="delid[]" value="'.$vo['id'].'" /></td>';
                           $cont.= '<td align="center">'.$vo['id'].'</td>';
                           $cont.= '<td width="20%">'.$sortstr.'</td>';
-                          $cont.= '<td><a title="点击预览" style="color:'.$vo['color'].'" target="_blank" href="'.$vo['url'].'">';
-                          $cont.= str_replace($keyword,"<font color=green>$keyword</font>",$vo['title']).'</a><font color=green>（'.$vo['hits'].'点击）</font></td>';
-                          $cont.= '<td width="150" align="center">'.$vo['realname'].'</td>';
-						  $cont.= '<td width="120" align="center" id="'.$vo['id'].'" class="order">'.$vo['norder'].'</td>'; 
+                          $cont.= '<td>';
+                          $cont.= str_replace($keyword,"<font color=green>$keyword</font>",$vo['title']).'<font color=green>（'.$vo['hits'].'）</font></td>';
+                          $cont.= '<td width="150" align="center">'.$vo['commentCount'].'</td>';
+						  // $cont.= '<td width="120" align="center" id="'.$vo['id'].'" class="order">'.$vo['norder'].'</td>'; 
                           $cont.= '<td width="150" align="center">'.date("Y-m-d H:i:s",$vo['addtime']).'</td><td align="center" width="150">';
                           $cont.=$vo['ispass']?'<div class="lock" >取消</div>':'<div class="unlock">审核</div>';
                           $cont.=$vo['recmd']?'<div class="unrecmd">取消</div>':'<div class="recmd">推荐</div>';

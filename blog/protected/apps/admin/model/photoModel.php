@@ -19,7 +19,7 @@ class photoModel extends baseModel{
 			}
 		}
 		if(!empty($where1)) $where.=empty($where)?'where '.$where1:' AND ('.$where1.')';
-		$sql="SELECT {$this->prefix}photo.id,{$this->prefix}photo.sort,{$this->prefix}photo.norder,{$this->prefix}photo.title,{$this->prefix}photo.color,{$this->prefix}photo.recmd,{$this->prefix}photo.hits,{$this->prefix}photo.ispass,{$this->prefix}photo.addtime,{$this->prefix}photo.method,{$this->prefix}photo.account,{$this->prefix}admin.realname FROM {$this->prefix}photo left outer join {$this->prefix}admin on {$this->prefix}photo.account = {$this->prefix}admin.username {$where}  ORDER BY {$this->prefix}photo.recmd DESC,{$this->prefix}photo.norder desc,{$this->prefix}photo.id DESC LIMIT {$limit}";
+		$sql="SELECT {$this->prefix}photo.commentCount,{$this->prefix}photo.id,{$this->prefix}photo.sort,{$this->prefix}photo.norder,{$this->prefix}photo.title,{$this->prefix}photo.color,{$this->prefix}photo.recmd,{$this->prefix}photo.hits,{$this->prefix}photo.ispass,{$this->prefix}photo.addtime,{$this->prefix}photo.method,{$this->prefix}photo.account,{$this->prefix}admin.realname FROM {$this->prefix}photo left outer join {$this->prefix}admin on {$this->prefix}photo.account = {$this->prefix}admin.username {$where}  ORDER BY {$this->prefix}photo.recmd DESC,{$this->prefix}photo.norder desc,{$this->prefix}photo.id DESC LIMIT {$limit}";
 		return $this->model->query($sql);
 	}
 	public function photocount($sort='',$place='',$keyword=''){
@@ -33,5 +33,10 @@ class photoModel extends baseModel{
 			$where.='places like "%'.$place.'%"';
 		}
 		return $this->count($where);
+	}
+	
+	public function photoadd($value){
+		$sql = "insert into {$this->prefix}images (aid,photo,content,addtime) values $value ";
+		return $this->model->query($sql);
 	}
 }
