@@ -8,10 +8,7 @@
 	width: 100%;
 	height: 645px;
 }
-.indexb{
-	width: 100%;
-	height: 76px;
-}
+
 .navi{
 	background: url('../images/navi.png')no-repeat;
 	width: 100%;
@@ -37,12 +34,12 @@
 }
 .indexab{
 	width: 493px;
-	height: 562px;
+	height: 542px;
 	float: left;
 }
 .indexac{
 	width: 446px;
-	height: 562px;
+	height: 542px;
 	float: left;
 }
 .notice{
@@ -58,12 +55,13 @@
 	background: url('../images/dotted.png') left no-repeat;
 	padding-left: 10px;
 	width: 315px;
-	height: 14px;
+	height: 18px;
 	float: left;
 	margin-top: 7px;
-	font-size: 13px;
+	font-size: 12px;
 	margin-left: 5px;
 	color: #000;
+	line-height: 18px;
 }
 .notice a{
 	margin-top: 20px;
@@ -71,16 +69,20 @@
 .noticea{
 	color: #8C9091;
 	float: right;
-	font-size: 8px;
+	font-size: 12px;
 	margin-top: 2px;
 	font-weight: bold;
 	margin-right: 5px;
+	height: 18px;
+	line-height: 18px;
 }
 .topic{
 	background: url('../images/topic.png')no-repeat;
 	width: 359px;
 	height: 121px;
 	margin-top: 20px;
+	padding-left: 45px;
+	padding-top: 13px;
 }
 .phone{
 	background: url('../images/phone.png')no-repeat;
@@ -88,6 +90,35 @@
 	height: 107px;
 	margin-top: 8px;
 	float: left;
+	padding-top: 12px;
+	padding-left: 10px;
+	
+}
+.phone .bm{
+	color: #FF6601;
+	padding-left: 5px;
+	border-bottom : 1px solid #ccc;
+	width: 80px;
+}
+.phone .zxcontent{
+	/*margin-top: 12px;*/
+}
+.phone .zx{
+	width: 30px;
+	float: left;
+	font-size: 12px;
+	padding-top: 20px;
+}
+.phone .time{
+	margin-left: 13px;
+	float: left;
+	font-size: 10px !important;
+	margin-top: 22px;
+}
+.phone .time font{
+	color: #245A91;
+	font-size: 14px;
+
 }
 .rt{
 	background: url('../images/rt.png')no-repeat;
@@ -97,8 +128,63 @@
 	margin-left: 5px;
 	float: left;
 }
+.rt div{
+	width: 100px;
+	padding: 20px 0 0 20px;
+	font-size: 12px;
+}
 .indexad{
 	width: 41px;
-	height: 562px;
+	height: 542px;
 	float: left;
+}
+
+.topictitle a{
+	color: #245A91;
+	font-size: 14px;
+}
+.topiccontent{
+	width: 183px;
+	font-size: 12px;
+	margin-top: 5px;
+}
+
+.footer{
+	width: 976px;
+	height: 76px;
+	border-bottom: 2px solid #245A91;
+	overflow: hidden;
+	border-left: 2px solid #245A91;
+	border-right: 2px solid #245A91;
+}
+.footerlogo{
+	width: 222px;
+	float: left;
+	border-right: 1px solid #CCC;
+	height: 76px;
+}
+.footerrigt{
+	width: 500px;
+	float: left;
+	overflow: hidden;
+	margin-left: 20px;
+	margin-top: 5px;
+	color: #888686;
+}
+.footerrigt p{
+	margin:0 0 5px 0;
+	font-size: 12px;
+}
+.footerrigt ul{
+
+	overflow: hidden;
+	margin-bottom: 5px;
+}
+.footerrigt ul li{
+	float: left;
+	margin-right: 20px;
+
+}
+.footerrigt ul li a{
+	color: #888686;
 }
