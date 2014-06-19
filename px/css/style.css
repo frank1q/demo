@@ -344,10 +344,50 @@
 	height: 57px;
 }
 .bottom{
-	background: #ddd;
-	width: 594px;
-	height: 355px;
+	width: 610px;
+	height: 335px;
+}
+.bottoma{
+	background: url('../images/contectleft.png')left no-repeat;
+	width: 145px;
+	height: 330px;
 	margin-left: 8px;
+	margin-top: -19px;
+	float: left;
+}
+.bottmaa{
+	background: url('../images/dotted.png') left no-repeat;
+	padding-left: 10px;
+	width: 315px;
+	height: 18px;
+	float: left;
+	margin-top: 17px;
+	font-size: 10px;
+	margin-left: 5px;
+	color: #666;
+	line-height: 18px;
+}
+.bottomb{
+	margin-left: 28px;
+	width:420px;
+	height: 307px; 
+	float: left;
+	margin-top: -16px;
+}
+.bottomb input{
+	border-bottom: 1px solid #D4D0C8;
+	margin-top: 13px;
+	width:416px;
+	height: 16px; 
+	float: left;
+	font-size: 10px;
+	outline: none;
+}
+.bottomc input{
+	width: 417px;
+	height: 120px;
+	margin-top: 11px;
+	float: left;
 }
 .image{
 	width: 542px;
