@@ -154,8 +154,7 @@
 	height: 76px;
 	border-bottom: 2px solid #245A91;
 	overflow: hidden;
-	/*border-left: 2px solid #245A91;*/
-	/*border-right: 2px solid #245A91;*/
+	padding-bottom: 15px;
 }
 .footerlogo{
 	width: 222px;
@@ -184,10 +183,10 @@
 .footerrigt ul li{
 	float: left;
 	margin-right: 20px;
-
 }
 .footerrigt ul li a{
 	color: #888686;
+	font-size: 12px;
 }
 .header{
 	width: 100%;
@@ -254,10 +253,11 @@
 }
 .qq{
 	margin-left: 12px;
+	margin-top: 50px;
 }
 .kkb{
 	width: 607px;
-	min-height: 542px;
+	min-height: 642px;
 	float: left;
 }
 .kkbtop{
@@ -268,13 +268,13 @@
 .kkbtopa{
 	font-size: 18px;
 	margin-left: 20px;
-	margin-top: 7px;
+	margin-top: 4px;
 	float: left;
 }
 .kkbtopb{
 	font-size: 12px;
-	margin-top: 11px;
-	margin-right: 80px;
+	margin-top: 8px;
+	margin-right: 73px;
 	float: right;
 }
 .top1{
@@ -383,11 +383,23 @@
 	font-size: 10px;
 	outline: none;
 }
-.bottomc input{
+.bottomc textarea{
 	width: 417px;
 	height: 120px;
 	margin-top: 11px;
 	float: left;
+}
+.bottome{
+	width: 134px;
+	height: 23px;
+}
+.bottome{
+	margin-left: 301px;
+}
+.bottome input{
+
+	width: 63px;
+	height: 23px;
 }
 .image{
 	width: 542px;
@@ -457,4 +469,10 @@
 	width: 184px;
 	height: 128px;
 	margin-left: 4px;
+}
+.info{
+	background: url('../images/info.png') left no-repeat;
+	width: 608px;
+	height: 111px;
+	margin-top: 27px;
 }
